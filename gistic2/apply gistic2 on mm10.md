@@ -204,12 +204,21 @@ norms(isq) = armlengths(Q(isq,1)');
 norms(isp) = armlengths((Q(isp,1)-1)');
 norms(spans_cent) = armlengths(QQ(spans_cent,1)');
 ```
-#### modify source/arm_medians.m
+#### modify source/arm_medians.m and source/add_cyto.m (linked by D.armn variant)
 ```matlab
-% line 33: the same reason, pq is the p and q band in human, so need to modify
-pq = 'p';
-% line 37
+% add_cyto.m line 52-56
+if ~isempty(find(cyto(p).name=='p'))
+  C.armn(snp)=2;
+else
+  C.armn(snp)=1;
+end
+% arm_medians.m line 30-33、37
+arm_medians = nan(Nchr,size(D.dat,2));
+arm_marks = zeros(Nchr,1);                                                                                                   
+arm_names = repmat({''},Nchr,1);                                                                                             
+pq = 'q';
 for a=1
+% ps: when use other type of cytoband, then modify the code according to the organization of the cytoband
 ```
 ### recompile with matlab to get new module
 - move to the dir of source/ dir
@@ -227,6 +236,20 @@ mcc -v -m -w enable -I [absolute_path_to_source]/source gp_gistic2_from_seg
   - Error in ipqpcommon>ipConvexQP (line 98)
 - reasons: without corresponding lib file in [gistic2_dir]/MATLAB_RUN_TIME/bin/glnxa64
 - solve: copy corresponding lib files from the installation dir of matlab (bin/glnxa64) to [gistic2_dir]/MATLAB_RUN_TIME/bin/glnxa64
+
+## about "arm 1: 1q 19236 markers" output
+- cause gistic2 is designed for human, D.armn variant only got {1,2} for {p,q} respectively
+  - if not modify,then will output "arm 1: 1p 0 markers" and it is wired obviously
+  - when apply to other species which has {p,q,r} band, it also only output {p,q} but not {r}
+  - so we need to move back to gistic_broad_analysis.m code and move back to add_cyto.m and arm_medians.m and modify the codes
+  - the details are in the "modify the source code file" parts
+
+# fulture (a big pie in the sky)
+- modify all code and create a GISTIC2 which can apply to all species
+
+# ps
+- the Chinese version of this tutorial is in my obsidian md file, tell me if you want
+- the related files are uploaded to the play_software/gistic2/
 
 # reference
 - [how to build refgene.mat file · Issue #5 · sbamin/canine_gistic2 (github.com)](https://github.com/sbamin/canine_gistic2/issues/5)
