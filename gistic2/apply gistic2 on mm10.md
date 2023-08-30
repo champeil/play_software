@@ -251,6 +251,9 @@ mcc -v -m -w enable -I [absolute_path_to_source]/source gp_gistic2_from_seg
 - the Chinese version of this tutorial is in my obsidian md file, tell me if you want
 - the related files are uploaded to the play_software/gistic2/
 
+# citation
+- Zhang M, Wen H, Liang M, Qin Y, Zeng Q, Luo D, Zhong X, Li S. Diagnostic Value of Sylvian Fissure Hyperechogenicity in Fetal SAH. AJNR Am J Neuroradiol. 2022 Apr;43(4):627-632. doi: 10.3174/ajnr.A7449. Epub 2022 Mar 10. PMID: 35272984; PMCID: PMC8993207.
+
 # reference
 - [how to build refgene.mat file · Issue #5 · sbamin/canine_gistic2 (github.com)](https://github.com/sbamin/canine_gistic2/issues/5)
 - [sbamin/canine_gistic2: Canine CanFam3.1 GISTIC2 copy number analysis. For debugging GISTIC2 .mat file, please contact developers at https://www.genepattern.org/modules/docs/GISTIC_2.0) or https://groups.google.com/a/broadinstitute.org/g/gistic-forum (github.com)](https://github.com/sbamin/canine_gistic2)
