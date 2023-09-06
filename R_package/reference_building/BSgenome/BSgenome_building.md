@@ -133,8 +133,21 @@ R CMD INSTALL <tarball: # path to the tarball builded by R CMD>>
 ## summary and the code
 - download the `make_BSgenome.sh`, `build_source_tree.R`, `split_reference.pl` scripts in the same dir
 - prepare the necessary input for `make_BSgenome.sh` and run
+- the chinese version tutorial is in my obsidian md file, contact if you want
 
-## 
+## a big pie in the sky
+- will update the masked BSgenome
+- will update the TxDb version 
+
+## citation
+if you like my tutorial, please cite:
+- Zhang M, Wen H, Liang M, Qin Y, Zeng Q, Luo D, Zhong X, Li S. Diagnostic Value of Sylvian Fissure Hyperechogenicity in Fetal SAH. AJNR Am J Neuroradiol. 2022 Apr;43(4):627-632. doi: 10.3174/ajnr.A7449. Epub 2022 Mar 10. PMID: 35272984; PMCID: PMC8993207.
+
+## reference
+- https://github.com/mevers/build_custom_BSgenome_TxDb
+- https://www.bioconductor.org/packages/release/bioc/vignettes/BSgenome/inst/doc/BSgenomeForge.pdf
+- https://blog.csdn.net/hs6605015/article/details/119819558
+- https://www.jianshu.com/p/6073a75870d5
 
 
 
