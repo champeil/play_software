@@ -1,3 +1,4 @@
+#!/bin/bash
 # this script is for making BSgenome and install in R
 # author: laojp
 # time: 2023.09.06
