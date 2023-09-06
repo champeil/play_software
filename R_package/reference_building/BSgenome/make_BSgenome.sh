@@ -33,7 +33,19 @@ done
 
 # create the source for package
 echo "---------- third to create source tree for packages ----------"
-Rscript build_source_tree.R ${3} ${1}
+Rscript build_source_tree.R ${1} ${3}
+
+# build-check-INSTALL the package of the source tree
+echo "---------- forth to build-check-install the source tree ----------"
+package_name=$(grep "Package" ${1} | awk -v FS=" " '{print $2}')
+package_dir=$(find ${3} -maxdepth 1 -name ${package_name} -type d | xargs realpath)
+R CMD build ${package_dir}
+R CMD check ${package_dir}*tar.gz
+R CMD INSTALL ${package_dir}*tar.gz
+
+echo "---------- DONE ----------"
+
+
 
 
 
