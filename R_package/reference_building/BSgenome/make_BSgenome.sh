@@ -31,6 +31,18 @@ find ${3} -name "*.fa" | while read id ; do
 	faToTwoBit $(realpath ${id}) ${3}/$(basename ${id} .fa).2bit &
 done
 
+# create the source for package
+echo "---------- third to create source tree for packages ----------"
+Rscript 
+
+
+
+
+
+
+
+
+
 
 
 
