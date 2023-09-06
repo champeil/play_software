@@ -33,7 +33,7 @@ done
 
 # create the source for package
 echo "---------- third to create source tree for packages ----------"
-Rscript 
+Rscript build_source_tree.R ${3} ${1}
 
 
 
