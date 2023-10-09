@@ -7,4 +7,4 @@ WXS (whole genome sequencing or whole exosome sequencing)
 
 reference_file
 - R_packages
-  - BSgenome: play_software/R_package/reference_building/BSgenome/BSgenome_building.md
+  - [BSgenome](https://github.com/champeil/play_software.github.io/blob/main/R_package/reference_building/BSgenome/BSgenome_building.md)
