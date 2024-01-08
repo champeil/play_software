@@ -18,4 +18,4 @@
 - cBind and rBind are wrong function
   - may be the cBind and rBind are replaced with cbind and rbind after R updated
 
-## the new package is in the champeil/play_software/R_package/DWD/DWD_0.11.tar.gz
+## the new package is in the [DWD_0.11](https://github.com/champeil/play_software/blob/main/R_package/DWD/DWD_0.11.tar.gz)
